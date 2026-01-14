@@ -25,7 +25,6 @@
     </p>
   </description>
 
-  <author>Chia-Ching Yen</author>
   <maintainer email="ccyen@umich.edu">Chia-Ching Yen</maintainer>
 
   <license>BSD</license>
@@ -34,6 +33,8 @@
   
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
+  <test_depend>launch_testing_ament_cmake</test_depend>
+  <test_depend>launch_testing_ros</test_depend>
 
   <exec_depend>joint_state_publisher</exec_depend>
   <exec_depend>joint_state_publisher_gui</exec_depend>
