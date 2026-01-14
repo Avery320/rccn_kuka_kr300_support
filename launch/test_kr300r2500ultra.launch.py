@@ -1,13 +1,15 @@
 import os
+
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
 from launch_ros.actions import Node
 import xacro
 
+
 def generate_launch_description():
     pkg_name = 'kuka_kr300_support'
     pkg_share = get_package_share_directory(pkg_name)
-    
+
     # Load URDF
     xacro_file = os.path.join(pkg_share, 'urdf', 'kr300r2500ultra.xacro')
     doc = xacro.process_file(xacro_file)
