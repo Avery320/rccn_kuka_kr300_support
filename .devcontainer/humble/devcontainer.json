@@ -1,6 +1,6 @@
 {
-    "name": "ROS 2 Jazzy Development Container",
-    "image": "osrf/ros:jazzy-desktop",
+    "name": "ROS 2 Humble",
+    "image": "osrf/ros:humble-desktop",
     "runArgs": [
         "--network=host",
         "--ipc=host",
@@ -20,5 +20,5 @@
             ]
         }
     },
-    "postCreateCommand": "sudo apt-get update && sudo apt-get install -y python3-colcon-common-extensions && echo 'source /opt/ros/jazzy/setup.bash' >> ~/.bashrc && git config --global --add safe.directory ${containerWorkspaceFolder}"
+    "postCreateCommand": "sudo apt-get update && sudo apt-get install -y python3-colcon-common-extensions && echo 'source /opt/ros/humble/setup.bash' >> ~/.bashrc && git config --global --add safe.directory ${containerWorkspaceFolder}"
 }
