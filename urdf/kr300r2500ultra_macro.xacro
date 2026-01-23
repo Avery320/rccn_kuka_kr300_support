@@ -9,7 +9,7 @@
     <link name="${prefix}base_link">
       <inertial>
         <origin xyz="0 0 0" rpy="0 0 0"/>
-        <mass value="2"/>
+        <mass value="2.2596E2"/>
         <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01" />
       </inertial>
       <visual>
@@ -32,7 +32,7 @@
     <link name="${prefix}link_1">
       <inertial>
         <origin xyz="0 0 0" rpy="0 0 0"/>
-        <mass value="2"/>
+        <mass value="3.6737E2"/>
         <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01" />
       </inertial>
       <visual>
@@ -55,7 +55,7 @@
     <link name="${prefix}link_2">
       <inertial>
         <origin xyz="0 0 0" rpy="0 0 0"/>
-        <mass value="2"/>
+        <mass value="2.3206E2"/>
         <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01" />
       </inertial>
       <visual>
@@ -78,7 +78,7 @@
     <link name="${prefix}link_3">
       <inertial>
         <origin xyz="0 0 0" rpy="0 0 0"/>
-        <mass value="2"/>
+        <mass value="1.9153E2"/>
         <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01" />
       </inertial>
       <visual>
@@ -101,7 +101,7 @@
     <link name="${prefix}link_4">
       <inertial>
         <origin xyz="0 0 0" rpy="0 0 0"/>
-        <mass value="2"/>
+        <mass value="4.7942845677E1"/>
         <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01" />
       </inertial>
       <visual>
@@ -124,7 +124,7 @@
     <link name="${prefix}link_5">
       <inertial>
         <origin xyz="0 0 0" rpy="0 0 0"/>
-        <mass value="2"/>
+        <mass value="2.3687644624E1"/>
         <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01" />
       </inertial>
       <visual>
@@ -147,7 +147,7 @@
     <link name="${prefix}link_6">
       <inertial>
         <origin xyz="0 0 0" rpy="0 0 0"/>
-        <mass value="2"/>
+        <mass value="1.2245718539E1"/>
         <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01" />
       </inertial>
       <visual>
@@ -178,7 +178,7 @@
       <parent link="${prefix}base_link"/>
       <child link="${prefix}link_1"/>
       <axis xyz="0 0 -1"/>
-      <limit effort="0" lower="${-DEG2RAD * 185}" upper="${DEG2RAD * 185}" velocity="${DEG2RAD * 156}"/>
+      <limit effort="7.29E3" lower="${-DEG2RAD * 185}" upper="${DEG2RAD * 185}" velocity="${DEG2RAD * 156}"/>
     </joint>
     <!-- joint 2 (A2) -->
     <joint name="${prefix}joint_a2" type="revolute">
@@ -186,7 +186,7 @@
       <parent link="${prefix}link_1"/>
       <child link="${prefix}link_2"/>
       <axis xyz="0 1 0"/>
-      <limit effort="0" lower="${-DEG2RAD * 155}" upper="${DEG2RAD * 35}" velocity="${DEG2RAD * 156}"/>
+      <limit effort="9.60003E3" lower="${-DEG2RAD * 155}" upper="${DEG2RAD * 35}" velocity="${DEG2RAD * 156}"/>
     </joint>
     <!-- joint 3 (A3) -->
     <joint name="${prefix}joint_a3" type="revolute">
@@ -194,7 +194,7 @@
       <parent link="${prefix}link_2"/>
       <child link="${prefix}link_3"/>
       <axis xyz="0 1 0"/>
-      <limit effort="0" lower="${-DEG2RAD * 130}" upper="${DEG2RAD * 154}" velocity="${DEG2RAD * 156}"/>
+      <limit effort="7.08714342281144E3" lower="${-DEG2RAD * 130}" upper="${DEG2RAD * 154}" velocity="${DEG2RAD * 156}"/>
     </joint>
     <!-- joint 4 (A4) -->
     <joint name="${prefix}joint_a4" type="revolute">
@@ -202,7 +202,7 @@
       <parent link="${prefix}link_3"/>
       <child link="${prefix}link_4"/>
       <axis xyz="-1 0 0"/>
-      <limit effort="0" lower="${-DEG2RAD * 350}" upper="${DEG2RAD * 350}" velocity="${DEG2RAD * 330}"/>
+      <limit effort="2.25887888718356E3" lower="${-DEG2RAD * 350}" upper="${DEG2RAD * 350}" velocity="${DEG2RAD * 330}"/>
     </joint>
     <!-- joint 5 (A5) -->
     <joint name="${prefix}joint_a5" type="revolute">
@@ -210,7 +210,7 @@
       <parent link="${prefix}link_4"/>
       <child link="${prefix}link_5"/>
       <axis xyz="0 1 0"/>
-      <limit effort="0" lower="${-DEG2RAD * 130}" upper="${DEG2RAD * 130}" velocity="${DEG2RAD * 330}"/>
+      <limit effort="2.26120660090655E3" lower="${-DEG2RAD * 130}" upper="${DEG2RAD * 130}" velocity="${DEG2RAD * 330}"/>
     </joint>
     <!-- joint 6 (A6) -->
     <joint name="${prefix}joint_a6" type="revolute">
@@ -218,7 +218,7 @@
       <parent link="${prefix}link_5"/>
       <child link="${prefix}link_6"/>
       <axis xyz="-1 0 0"/>
-      <limit effort="0" lower="${-DEG2RAD * 350}" upper="${DEG2RAD * 350}" velocity="${DEG2RAD * 615}"/>
+      <limit effort="1.46107811041986E3" lower="${-DEG2RAD * 350}" upper="${DEG2RAD * 350}" velocity="${DEG2RAD * 615}"/>
     </joint>
     <!-- tool frame - fixed frame -->
     <joint name="${prefix}joint_a6-tool0" type="fixed">
@@ -238,5 +238,3 @@
 
   </xacro:macro>
 </robot>
-
-

@@ -20,3 +20,4 @@ rosrun xacro xacro -o kr300r2500ultra.urdf kr300r2500ultra.xacro
 - Generating `.dae` files from Rhino 8 yeilds self-closing tags. Also rviz, moveit can't visualize the model even after solving the self-closing tags issue. Right now, the model is still using the `.stl` files for visualization.
 - launch files is working but the approach adapted by abb package is more elegant.
 - Collision meshes are slighly smaller than the visual meshes at some places, especially at the corners of the links. This is due to the simplification process in meshlab.
+- Effort and mass value are copied from KR300 R2700, where the link 1 and link 5 are known to be slightly different. (https://github.com/kroshu/kuka_robot_descriptions/blob/master/kuka_quantec_support/urdf/kr300_r2700_2_macro.xacro)
