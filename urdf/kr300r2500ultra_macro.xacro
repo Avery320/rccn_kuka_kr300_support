@@ -166,6 +166,8 @@
         </geometry>
       </collision>
     </link>
+    <!-- flange -->
+    <link name="${prefix}flange"/>
     <!-- tool 0 -->
     <!-- This frame corresponds to the $FLANGE coordinate system in KUKA KRC controllers. -->
     <link name="${prefix}tool0"/>
@@ -220,11 +222,17 @@
       <axis xyz="-1 0 0"/>
       <limit effort="1.46107811041986E3" lower="${-DEG2RAD * 350}" upper="${DEG2RAD * 350}" velocity="${DEG2RAD * 615}"/>
     </joint>
-    <!-- tool frame - fixed frame -->
-    <joint name="${prefix}joint_a6-tool0" type="fixed">
+    <!-- flange -->
+    <joint name="${prefix}joint_a6-flange" type="fixed">
       <parent link="${prefix}link_6"/>
+      <child link="${prefix}flange"/>
+      <origin xyz="0.240 0 0" rpy="0 0 0"/>
+    </joint>
+    <!-- tool frame - fixed frame -->
+    <joint name="${prefix}flange-tool0" type="fixed">
+      <parent link="${prefix}flange"/>
       <child link="${prefix}tool0"/>
-      <origin xyz="0.240 0 0" rpy="0 ${DEG2RAD * 90} 0"/>
+      <origin xyz="0 0 0" rpy="0 ${DEG2RAD * 90} 0"/>
     </joint>
     <!-- END JOINTS -->
 
